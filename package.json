@@ -12,7 +12,7 @@
     "index.js",
     "Gruntfile.js",
     "examples",
-    "README.md"
+    "README.md",
     "LICENSE"
   ],
   "engines": {

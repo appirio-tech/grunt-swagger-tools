@@ -14,7 +14,7 @@ The validation process is simplified with the use of this [Swagger tool](https:/
 
 It is design to be run with [npm](https://www.npmjs.org/package/npm) using `npm run-script {XXXX};` where XXXX is one of demo, test, nolog.
 
-This initial release also supports running [swagger-validator](https://github.com/topcoderinc/grunt-swagger-tools) with [grunt](https://github.com/gruntjs/grunt) .
+This initial release also supports running [grunt-swagger-tools](https://github.com/topcoderinc/grunt-swagger-tools) with [grunt](https://github.com/gruntjs/grunt) .
 
 ### How to install
 
