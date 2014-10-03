@@ -1,0 +1,29 @@
+[4mRunning "nolog" task[24m
+Running Version 1.2 Demo test
+Invalid 1.2 Swagger API file 'undefined'
+Reading (1.2): './examples/1.2/api/api-doc.json'
+
+Invalid v1 API Swagger filename: 'undefined'
+Reading (1.2): './examples/1.2/api/api-doc.json'
+
+File './examples/1.2/api/api-doc.json' is valid 1.2 Swagger '.json' file.
+
+1.2 RESULT: true
+
+Running Version 2.0 Demo test
+Invalid 2.0 Swagger API file 'undefined'
+Reading (2.0): './examples/2.0/api/swagger.json'
+
+File './examples/2.0/api/swagger.json' is valid 2.0 Swagger '.json' file.
+
+2.0 RESULT: true
+
+Running Version 2.0 YAML Demo test
+Reading (2.0): './examples/2.0/api/swagger.yaml'
+
+File './examples/2.0/api/swagger.yaml' is valid 2.0 Swagger '.yaml' file.
+
+YAML 2.0 RESULT: true
+
+
+[32mDone, without errors.[39m
