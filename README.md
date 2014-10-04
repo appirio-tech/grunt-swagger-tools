@@ -4,7 +4,7 @@
 
 This is an initial public release.
 
-### What is swagger-validator?
+### What is grunt-swagger-tools?
 
 This software is a [NodeJS](http://nodejs.org) application.
 
@@ -71,24 +71,66 @@ This initial release also supports running [grunt-swagger-tools](https://github.
  ```
 var swagger_testfiles = {
 
-	// for 1.2 Swagger Specification file
-	version_1 : [
-		"./examples/1.2/api/api-doc.json",
-		"./examples/1.2/api/weather.json"
-	],
+    // for 1.2 Swagger Specification file
+    version_1 : [
+        './examples/1.2/api/api-doc.json',
+        './examples/1.2/api/weather.json'
+    ],
 
-	// for 2.0 Swagger Specification file
-	version_2 : [
-		"./examples/2.0/api/swagger.json",
-		""
-	],
+    // for 2.0 Swagger Specification file
+    version_2 : [
+        './examples/2.0/api/swagger.json',
+        ''
+    ],
 
-	// YAML version of a 2.0 Swagger Specification file
-	version_3 : [
-		"./examples/2.0/api/swagger.yaml",
-		""
-	]
+    // YAML version of a 2.0 Swagger Specification file
+    version_3 : [
+        './examples/2.0/api/swagger.yaml',
+        ''
+   ]
 };
+
+    ```
+
+### Here is a sample grunt task name 'yamlTest'
+
+* on top of Gruntfile.js, add the following
+
+ ```
+  var re;
+  var swagger;
+  var swagger_file = __dirname + '/PATH/TO/YOUR/SWAGGER.yaml';
+
+    ```
+
+* at the bottom of Gruntfile.js, add something like
+
+ ```
+  // should be >= 0.10.0
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+  // yaml tester for ./PATH/TO/YOUR/SWAGGER.yaml
+  grunt.task.registerTask('yamlTest', 'Test Swagger spec file', function() {
+
+	// load the grunt-swagger-tools >= 0.1.1
+	try {
+		swagger = require('grunt-swagger-tools')();
+
+		// Setup 2.0 Swagger spec compliant using YAML format
+		swagger.validator.set('fileext', '.yaml');
+
+		// No logging of loaded YAML data
+		swagger.validator.set('log', 'true');
+
+		// Run the validator on file at swagger_file
+		console.log('YAML Test for file: ' + swagger_file + '\n');
+		re = swagger.validator.Validate(swagger_file, undefined, {version: '2.0'});
+
+	} catch (e) { re = e.message; }
+
+	// If has error, result in console
+	console.log('YAML 2.0 RESULT: ' + re + '\n');
+  });
 
     ```
 

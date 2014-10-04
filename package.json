@@ -1,33 +1,26 @@
 {
   "name": "grunt-swagger-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Serenity Grunt module for Swagger validation",
   "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "swagger-tools": "^0.5.8",
+    "grunt-contrib-jshint": "^0.10.0"
+  },
+  "devDependencies": {
+  },
   "scripts": {
     "test": "grunt test",
     "demo": "grunt demo",
     "nolog": "grunt nolog"
   },
-  "files": [
-    "index.js",
-    "Gruntfile.js",
-    "examples",
-    "README.md",
-    "LICENSE"
-  ],
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "dependencies": {
-	"swagger-tools": "~0.5.8"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-jshint": "~0.10.0"
-  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:topcoderinc/grunt-swagger-tools.git"
+    "url": "https://github.com/topcoderinc/grunt-swagger-tools.git"
   },
   "keywords": [
     "Serenity",
@@ -35,21 +28,18 @@
     "Swagger",
     "Module"
   ],
-  "author": {
-    "name": "Teddy Albon",
-    "email": "tmalbonph@yahoo.com",
-    "url": "https://github.com/tmalbon"
-  },
-  "licenses": [
-    {
-	  "type": "The MIT License",
-	  "url": "https://github.com/topcoderinc/grunt-swagger-tools/blob/master/LICENSE"
-    }
-  ],
+  "author": "Teddy Albon <tmalbonph@yahoo.com> (https://github.com/tmalbonph)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/topcoderinc/grunt-swagger-tools/issues"
   },
   "homepage": "https://github.com/topcoderinc/grunt-swagger-tools",
+  "files": [
+    "index.js",
+    "Gruntfile.js",
+    "README.md",
+    "LICENSE"
+  ],
   "maintainers": [
     {
       "name": "Neil Hastings",
@@ -61,6 +51,5 @@
       "email": "tmalbonph@yahoo.com",
       "url": "https://github.com/tmalbon"
     }
-  ],
+  ]
 }
-

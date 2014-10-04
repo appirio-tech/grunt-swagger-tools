@@ -6,7 +6,9 @@
  *  COPILOT : _indy
  * 
  *  AUTHOR  : TMALBONPH
- *  VERSION : 1.0
+ *  VERSION : 1.1
+ *
+ *  UPDATED : Added the try - catch block in swagger.validator.Validate()
  *  ------------------------------------------------------------------------
  */
 
@@ -359,16 +361,21 @@ function fn_swagger_validator_Init() {
 		var isLog = fn_swagger_validator_compareString('true', swagger.validator.get('log'));
 
 		p_error[0] = "";
-		if (isV2) {
-			isValid = v2_Validator(isLog, filename, fileext, p_error);
-		}
-		else {
-			// API doc file must be valid
-			if (fn_swagger_validator_getStringParameter(apiDoc).length < 1) {
-				console.log("Invalid v1 API Swagger filename: '" + apiDoc + "'");
-				return false;
+		try {
+			if (isV2) {
+				isValid = v2_Validator(isLog, filename, fileext, p_error);
 			}
-			isValid = v1_Validator(isLog, filename, apiDoc, fileext, p_error);
+			else {
+				// API doc file must be valid
+				if (fn_swagger_validator_getStringParameter(apiDoc).length < 1) {
+					console.log("Invalid v1 API Swagger filename: '" + apiDoc + "'");
+					return false;
+				}
+				isValid = v1_Validator(isLog, filename, apiDoc, fileext, p_error);
+			}
+		} catch (e) {
+			p_error[0] = e.message;
+			isValid = false;
 		}
 		if (isValid) {
 			status = "valid";
