@@ -80,6 +80,9 @@ module.exports = function(grunt) {
     },
   });
 
+  //Load NPM tasks
+  require('load-grunt-tasks')(grunt);
+
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
 

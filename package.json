@@ -9,7 +9,9 @@
   "dependencies": {
     "grunt": "^0.4.5",
     "swagger-tools": "^0.5.8",
-    "grunt-contrib-jshint": "^0.10.0"
+    "grunt-contrib-jshint": "^0.10.0",
+    "load-grunt-tasks": "^0.4.0",
+    "jshint": "^2.5.5"
   },
   "devDependencies": {
   },
