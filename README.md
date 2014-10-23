@@ -64,6 +64,27 @@ This initial release also supports running [grunt-swagger-tools](https://github.
 
  `grunt nolog`
 
+### NOTES
+
+* jshint version 2.5.5 is failing with this error 
+
+ ```
+  npm ERR! cb() never called!
+  npm ERR! not ok code 0
+
+  npm install jshint@2.5.0
+
+  jshint@2.5.0 node_modules/jshint
+  strip-json-comments@0.1.3
+  console-browserify@0.1.6
+  exit@0.1.2
+  underscore@1.4.4
+  shelljs@0.1.4
+  minimatch@0.4.0 (sigmund@1.0.0, lru-cache@2.5.0)
+  htmlparser2@3.3.0 (domelementtype@1.1.1, domutils@1.1.6, domhandler@2.1.0, readable-stream@1.0.33-1)
+  cli@0.4.5 (glob@4.0.6)
+```
+
 ### How to use it to test your Swagger document?
 
 * there is a demo file Gruntfile.js update it to suite your needs.
@@ -120,7 +141,7 @@ var swagger_testfiles = {
 		swagger.validator.set('fileext', '.yaml');
 
 		// No logging of loaded YAML data
-		swagger.validator.set('log', 'true');
+		swagger.validator.set('log', 'false');
 
 		// Run the validator on file at swagger_file
 		console.log('YAML Test for file: ' + swagger_file + '\n');

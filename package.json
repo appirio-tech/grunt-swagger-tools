@@ -1,6 +1,6 @@
 {
   "name": "grunt-swagger-tools",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Serenity Grunt module for Swagger validation",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
     "swagger-tools": "^0.5.8",
     "grunt-contrib-jshint": "^0.10.0",
     "load-grunt-tasks": "^0.4.0",
-    "jshint": "^2.5.5"
+    "jshint": "2.5.0"
   },
   "devDependencies": {
   },
