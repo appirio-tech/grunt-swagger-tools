@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/topcoderinc/grunt-swagger-tools.git"
+    "url": "https://github.com/appirio-tech/grunt-swagger-tools.git"
   },
   "keywords": [
     "Serenity",
@@ -33,9 +33,9 @@
   "author": "Teddy Albon <tmalbonph@yahoo.com> (https://github.com/tmalbonph)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/topcoderinc/grunt-swagger-tools/issues"
+    "url": "https://github.com/appirio-tech/grunt-swagger-tools/issues"
   },
-  "homepage": "https://github.com/topcoderinc/grunt-swagger-tools",
+  "homepage": "https://github.com/appirio-tech/grunt-swagger-tools",
   "files": [
     "index.js",
     "Gruntfile.js",
