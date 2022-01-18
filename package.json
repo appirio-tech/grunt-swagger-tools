@@ -11,7 +11,7 @@
     "swagger-tools": "^0.6.13",
     "grunt-contrib-jshint": "^0.10.0",
     "load-grunt-tasks": "^0.4.0",
-    "jshint": "2.5.0"
+    "jshint": "2.13.2"
   },
   "devDependencies": {},
   "scripts": {
